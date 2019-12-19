@@ -10,19 +10,12 @@
   "author": "Zeshan Mehmood",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.4",
-    "csv": "^5.3.1",
-    "csv-write-stream": "^2.0.0",
-    "csv-writer": "^1.5.0",
     "express": "^4.17.1",
     "express-watcher": "^1.0.3",
-    "fast-csv": "^3.6.0",
     "image-size": "^0.8.3",
     "jimp": "^0.9.3",
     "json2csv": "^4.5.4",
     "multer": "^1.4.2",
-    "objects-to-csv": "^1.3.5",
     "request-ip": "^2.1.3",
     "sharp": "^0.23.4"
   }
