@@ -2,6 +2,10 @@ const express = require('express')
 app = express()
 var path = require('path')
 
+// log response time of requests
+const logResponseTime = require('./operations/logResponseTime')
+app.use(logResponseTime)
+
 // Importing routes 
 const routes =require('./routes/routes')
 // Assigning routes to the application
