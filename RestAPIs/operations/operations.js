@@ -68,12 +68,12 @@ module.exports.isValidJSON = (text) => {
                                             }
 }
 
-module.exports.jsonToCsv = (req, res) => {  
+module.exports.jsonToCsv = (req, res, timer) => {  
                                     var path = 'csvFile.csv'
                                     const fields = Object.keys(req.body)
                                     const values = Object.values(req.body)
-                                    console.log(fields);
-                                    console.log(values);
+                                    // console.log(fields);
+                                    // console.log(values);
                                     try {
 
                                             if (!fs.existsSync(path)) {
@@ -83,6 +83,7 @@ module.exports.jsonToCsv = (req, res) => {
                                                     fs.writeFile('csvFile.csv',  csv, (err) => {
                                                     if (err) throw new Error('Couldn\'t write the data to a file');
                                                     console.log('The data was appended to file!');
+
                                                     });
                                             } else {
                                                     // Next insertions
@@ -97,6 +98,6 @@ module.exports.jsonToCsv = (req, res) => {
                                     console.error(err);
                                     res.send({"errorMessage": "Error in file operation"})
                                     }
-                                    res.json(req.body)
+                                    res.json({"jsonData": req.body})
 
 }
