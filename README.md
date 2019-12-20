@@ -28,7 +28,8 @@ These are RESTApi endpoints:
 
 ```
 
-localhost:3000/api/img
+URI: localhost:3000/api/img
+Method: POST
 
 content/type: Form-data
 
@@ -46,7 +47,8 @@ Optional Fields
 ```
 
 ```
-localhost:3000/api/data
+URI: localhost:3000/api/data
+Method: POST
 
 content/type: json
 
