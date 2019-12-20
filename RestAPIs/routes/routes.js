@@ -73,7 +73,7 @@ router.post('/img', upload.single('imgFile'), function(req,res,next){
 
 router.post('/data', function(req, res, next) {
     if (ops.isValidJSON(JSON.stringify(req.body, null, 5)) && req.body !== {}) {
-            ops.jsonToCsv(req, res, timer)
+            ops.jsonToCsv(req, res)
     } else {
         res.send({"errorMessage": "Invalid JSON", "errorCode": 400})
     }

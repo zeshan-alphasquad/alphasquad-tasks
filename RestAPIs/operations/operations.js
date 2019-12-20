@@ -68,7 +68,7 @@ module.exports.isValidJSON = (text) => {
                                             }
 }
 
-module.exports.jsonToCsv = (req, res, timer) => {  
+module.exports.jsonToCsv = (req, res) => {  
                                     var path = 'csvFile.csv'
                                     const fields = Object.keys(req.body)
                                     const values = Object.values(req.body)
