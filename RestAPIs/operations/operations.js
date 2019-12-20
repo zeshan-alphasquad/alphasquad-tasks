@@ -26,7 +26,7 @@ module.exports.resize = (inputImagePath, width, height, outputImage) => {
 }
 
 // Function for Cropping the image
-module.exports.crop = (baseUrl, width, height, left, top, imagePath, 
+module.exports.crop = (baseUrl, width, height, imagePath, 
                                 inputImage, outputImagePath, outputImage, res, req) => {
                                     sharp(imagePath).extract({ width: width, height: height, left: 0, top: 0  }).toFile(outputImagePath)
                                                             .then(function(new_file_info) {

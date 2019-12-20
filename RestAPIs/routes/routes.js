@@ -30,22 +30,22 @@ router.post('/img', upload.single('imgFile'), function(req,res,next){
     const file = req.file
     var filetype = ops.fileType(file)
     var valid = false
+
+     // Getting size of image
+     var height = 300, width = 300
+     try {
+         height = parseInt(req.body.height)
+         width =  parseInt(req.body.width)
+     } catch (error) {
+         height = 100
+         width =  100
+     }
     // Checking Image type
     if(file.mimetype === 'image/gif' || file.mimetype === 'image/png' || 
         file.mimetype === 'image/jpeg' || file.mimetype === 'image/jpg') {
             valid = true
     } else{
         res.send({"error": "Please upload valid image file", "errorCode": "400"})
-    }
-
-    // Getting size of image
-    var height, width
-    try {
-        height = parseInt(req.body.height)
-        width =  parseInt(req.body.width)
-    } catch (error) {
-        height = 100
-        width =  100
     }
 
     if (!file) {
@@ -64,7 +64,7 @@ router.post('/img', upload.single('imgFile'), function(req,res,next){
             var left = parseInt(dimensions.width/2)
             var top =  parseInt(dimensions.height/2)
             var baseUrl = 'localhost:3000'
-            ops.crop(baseUrl, width, height, left, top, imagePath, inputImage, outputImagePath, outputImage, res, req)
+            ops.crop(baseUrl, width, height, imagePath, inputImage, outputImagePath, outputImage, res, req)
         }
 
     }
