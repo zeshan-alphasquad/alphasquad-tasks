@@ -9,12 +9,20 @@ var resourceMonitorMiddlewareCB = require('express-watcher').resourceMonitorMidd
 // example with callback function
 app.use(function(req, res, next){
   resourceMonitorMiddlewareCB(req, res, next, function(diffJson){
-    ramAndMemory = "RAM : " + diffJson.diffRAM + " - Memory : " + diffJson.diffExternal + " - CPU : " + diffJson.diffCPU + " - "
+
+    // Checking if it's integer or not
+    diffJson.diffRAM === "NaN undefined" ? diffJson.diffRAM = 0 : diffJson.diffRAM
+    diffJson.diffExternal === "NaN undefined" ? diffJson.diffExternal = 0 : diffJson.diffExternal
+    diffJson.diffCPU === "NaN undefined" ? diffJson.diffCPU = 0 : diffJson.diffCPU
+    ramAndMemory = "RAM : " + diffJson.diffRAM + " - Memory : " 
+                    + diffJson.diffExternal + " - CPU : " + diffJson.diffCPU + " - "
+    // Writing Memory and RAM in Logs
     fs.appendFile('responseTimeLog.txt',  ramAndMemory, (err) => {
         if (err) throw new Error('Couldn\'t write the data to a file')
         })
   })
 })
+
 
 // log response time of requests
 const logResponseTime = require('./operations/logResponseTime')

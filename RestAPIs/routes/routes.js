@@ -32,7 +32,7 @@ router.post('/img', upload.single('imgFile'), function(req,res,next){
     var valid = false
 
      // Getting size of image
-     var height = 300, width = 300
+     var height, width
      try {
          height = parseInt(req.body.height)
          width =  parseInt(req.body.width)
@@ -64,6 +64,8 @@ router.post('/img', upload.single('imgFile'), function(req,res,next){
             var left = parseInt(dimensions.width/2)
             var top =  parseInt(dimensions.height/2)
             var baseUrl = 'localhost:3000'
+            width=== NaN? width = 300 : width
+            height=== NaN? height = 300 : height
             ops.crop(baseUrl, width, height, imagePath, inputImage, outputImagePath, outputImage, res, req)
         }
 

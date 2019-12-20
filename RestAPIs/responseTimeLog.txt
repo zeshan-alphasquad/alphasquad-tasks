@@ -1,0 +1,2 @@
+RAM : 112 KB - Memory : 452 Bytes - CPU : 31 - Fri Dec 20 2019 19:32:46 GMT+0500 (Pakistan Standard Time) - /data : 34.445223
+RAM : 36 KB - Memory : 452 Bytes - CPU : 16 - Fri Dec 20 2019 19:34:16 GMT+0500 (Pakistan Standard Time) - /data : 24.702128
