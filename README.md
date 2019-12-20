@@ -1,6 +1,6 @@
 # AphaSquad Tasks
 
-After cloning on your PC run
+After cloning on your PC go to project directory
 
 ```
 cd RestAPIs
@@ -14,7 +14,7 @@ Use the package manager [npm](https://www.npmjs.com) to install dependencies.
 npm install
 ```
 
-For running on your local PC 
+For running on your local 
 
 ```
 npm start
