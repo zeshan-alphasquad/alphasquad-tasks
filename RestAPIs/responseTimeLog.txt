@@ -1,3 +1,0 @@
-RAM : 1 MB - Memory : 85 KB - CPU : 79 - Fri Dec 20 2019 18:20:15 GMT+0500 (Pakistan Standard Time) - /api/data : 242.421606
-RAM : 44 KB - Memory : 480 Bytes - CPU : 0 - Fri Dec 20 2019 18:20:36 GMT+0500 (Pakistan Standard Time) - /api/data : 14.196312
-RAM : 36 KB - Memory : 480 Bytes - CPU : 0 - Fri Dec 20 2019 18:20:46 GMT+0500 (Pakistan Standard Time) - /api/data : 38.782051

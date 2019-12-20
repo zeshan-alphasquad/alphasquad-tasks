@@ -11,9 +11,8 @@ app.use(function(req, res, next){
   resourceMonitorMiddlewareCB(req, res, next, function(diffJson){
     ramAndMemory = "RAM : " + diffJson.diffRAM + " - Memory : " + diffJson.diffExternal + " - CPU : " + diffJson.diffCPU + " - "
     fs.appendFile('responseTimeLog.txt',  ramAndMemory, (err) => {
-        if (err) throw new Error('Couldn\'t write the data to a file');
-        });
-    next()
+        if (err) throw new Error('Couldn\'t write the data to a file')
+        })
   })
 })
 
