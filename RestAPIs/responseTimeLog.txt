@@ -22,3 +22,4 @@ Fri Dec 20 2019 15:48:24 GMT+0500 (Pakistan Standard Time) - /data : 8.778372
 Fri Dec 20 2019 15:48:25 GMT+0500 (Pakistan Standard Time) - /data : 52.410568
 Fri Dec 20 2019 16:18:55 GMT+0500 (Pakistan Standard Time) - /api/img : 113.455171
 Fri Dec 20 2019 16:20:50 GMT+0500 (Pakistan Standard Time) - /img : 321.166936
+Fri Dec 20 2019 16:22:29 GMT+0500 (Pakistan Standard Time) - /img : 158.851248

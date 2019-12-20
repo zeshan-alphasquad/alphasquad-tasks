@@ -2,6 +2,9 @@ const express = require('express')
 app = express()
 var path = require('path')
 
+// Serving the Image files
+app.use('/images',express.static(path.join(__dirname,'uploads')))
+
 // log response time of requests
 const logResponseTime = require('./operations/logResponseTime')
 app.use(logResponseTime)
@@ -11,8 +14,6 @@ const routes =require('./routes/routes')
 // Assigning routes to the application
 
 app.use('/api',routes)
-// Serving the Image files
-app.use('/images',express.static(path.join(__dirname,'uploads')))
 
 //Error Handler Middlewre
 app.use(function (err, req, res, next) {
@@ -28,4 +29,6 @@ app.use(function (err, req, res, next) {
 var port = process.env.PORT || 3000
 app.listen(port,function(){
     console.log("Server runing on port "+port)
+    console.log(process.env)
+    
 })
