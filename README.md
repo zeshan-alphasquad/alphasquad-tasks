@@ -24,6 +24,8 @@ It will be running on localhost:3000
 
 ## Usage
 
+These are RESTApi endpoints:
+
 ```
 
 localhost:3000/api/img
