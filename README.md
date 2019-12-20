@@ -50,6 +50,7 @@ Optional Fields
 URI: localhost:3000/api/data
 Method: POST
 
+Required
 content/type: json
 
 ```
