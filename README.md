@@ -20,7 +20,7 @@ For running on your local
 npm start
 ```
 
-It will be running on localhost:3000 [localhost:3000](http://localhost:3000)
+It will be running on [localhost:3000](http://localhost:3000)
 
 ## Usage
 
